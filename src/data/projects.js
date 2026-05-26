@@ -107,8 +107,8 @@ export const skills = [
     items: ["React", "Vite", "JavaScript", "HTML", "CSS", "Firebase"],
   },
   {
-    group: "Testing & DevOps",
-    items: ["Jest", "Supertest", "Docker", "Swagger / OpenAPI", "Git", "CI básico"],
+    group: "Testing & Deploy",
+    items: ["Jest", "Supertest", "Swagger / OpenAPI", "Docker", "Vercel", "Render", "MongoDB Atlas", "Git / GitHub", "CI básico"],
   },
 ];
 

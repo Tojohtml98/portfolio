@@ -3,7 +3,7 @@
 > Portfolio personal de Tomás Orella, Junior Full-Stack Developer (foco backend Node.js).
 > Agrupa los proyectos en producción, el stack y los datos de contacto en una sola página.
 
-🔗 **Live:** _(se completa al deployar)_
+🔗 **Live:** https://portfolio-pied-one-4hquhnqev3.vercel.app
 
 ## Stack
 

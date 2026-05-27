@@ -36,10 +36,12 @@ export default function ProjectCard({ project }) {
       </div>
 
       <div className="card-links">
-        <a className="card-link primary" href={live} target="_blank" rel="noreferrer">
-          {liveLabel || "Ver live"} <Arrow />
-        </a>
-        <a className="card-link" href={code} target="_blank" rel="noreferrer">
+        {live && (
+          <a className="card-link primary" href={live} target="_blank" rel="noreferrer">
+            {liveLabel || "Ver live"} <Arrow />
+          </a>
+        )}
+        <a className={`card-link${live ? "" : " primary"}`} href={code} target="_blank" rel="noreferrer">
           Código <Arrow />
         </a>
         {cold && <span className="cold-note">⏳ free tier: 1ª carga ~30s</span>}

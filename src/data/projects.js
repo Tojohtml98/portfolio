@@ -3,6 +3,20 @@
 
 export const projects = [
   {
+    title: "Code Reviewer Agent",
+    kind: "AI · CLI",
+    featured: true,
+    blurb:
+      "CLI que revisa tus cambios de git como un senior — bugs, seguridad y claridad — construida sobre el Claude Agent SDK, el mismo motor que usa Claude Code.",
+    highlights: [
+      "El agente explora el repo con tools de solo lectura (Read/Grep/Glob) para entender el contexto",
+      "Permisos controlados con canUseTool: aprueba solo lectura y deniega el resto",
+      "Streaming de la review en vivo a la terminal",
+    ],
+    stack: ["Node.js", "Claude Agent SDK", "ESM", "CLI"],
+    code: "https://github.com/Tojohtml98/code-reviewer-agent",
+  },
+  {
     title: "TaskFlow API",
     kind: "Backend",
     featured: true,
@@ -100,7 +114,7 @@ export const projects = [
 export const skills = [
   {
     group: "Backend",
-    items: ["Node.js", "Express", "MongoDB", "Mongoose", "JWT", "REST APIs", "Clean Architecture"],
+    items: ["Node.js", "Express", "MongoDB", "Mongoose", "JWT", "REST APIs", "Clean Architecture", "Claude Agent SDK"],
   },
   {
     group: "Frontend",

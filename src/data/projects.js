@@ -18,16 +18,16 @@ export const projects = [
   },
   {
     title: "TaskFlow API",
-    kind: "Backend",
+    kind: "Backend · TypeScript",
     featured: true,
     blurb:
-      "REST API de gestión de tareas con autenticación JWT y rotación de refresh tokens, arquitectura en capas estricta y 30 tests de integración.",
+      "REST API de gestión de tareas migrada entera a TypeScript: autenticación JWT con rotación de refresh tokens, arquitectura en capas estricta y 30 tests de integración.",
     highlights: [
+      "Migrada de JavaScript a TypeScript con tipado estricto (dominio, req.user, servicios); los 30 tests siguen en verde",
       "Auth stateless: access 15m + refresh con rotación e invalidación al logout",
       "Pipeline Route → Controller → Service → Repository → Model",
-      "30 tests de integración con Mongo en memoria",
     ],
-    stack: ["Node.js", "Express", "MongoDB", "JWT", "Jest", "Docker"],
+    stack: ["TypeScript", "Node.js", "Express", "MongoDB", "JWT", "Jest", "Docker"],
     live: "https://taskflow-api-mti1.onrender.com",
     code: "https://github.com/Tojohtml98/taskflow-api",
     cold: true,
@@ -65,16 +65,17 @@ export const projects = [
     cold: true,
   },
   {
-    title: "Ecommerce API",
-    kind: "Backend",
-    featured: false,
+    title: "Ecommerce API · Políglota",
+    kind: "Backend · Microservicios",
+    featured: true,
     blurb:
-      "API de ecommerce con catálogo de productos, carrito y órdenes sobre Node.js, Express y MongoDB.",
+      "El mismo dominio de ecommerce resuelto en tres tecnologías: API Node + MongoDB, una capa relacional en PostgreSQL y un microservicio de analytics en Python (FastAPI) — todos sobre el mismo negocio.",
     highlights: [
-      "CRUD de productos, carrito y órdenes",
-      "Modelado de datos en MongoDB con Mongoose",
+      "Capa PostgreSQL: schema relacional, JOINs, transacciones y SELECT … FOR UPDATE para descontar stock sin race conditions",
+      "Microservicio Python (FastAPI + Pydantic, async) de lectura y métricas sobre la misma base: microservicios políglotas",
+      "API original Node + Express + MongoDB con catálogo, carrito y órdenes",
     ],
-    stack: ["Node.js", "Express", "MongoDB", "Mongoose"],
+    stack: ["Node.js", "Express", "MongoDB", "PostgreSQL", "Python", "FastAPI", "Docker"],
     live: "https://nodejs-ecommerce-api-oqbu.onrender.com",
     code: "https://github.com/Tojohtml98/Nodejs-Ecommerce-API",
     cold: true,
@@ -114,7 +115,7 @@ export const projects = [
 export const skills = [
   {
     group: "Backend",
-    items: ["Node.js", "Express", "MongoDB", "Mongoose", "JWT", "REST APIs", "Clean Architecture", "Claude Agent SDK"],
+    items: ["Node.js", "Express", "TypeScript", "Python", "FastAPI", "MongoDB", "PostgreSQL", "Mongoose", "JWT", "REST APIs", "Clean Architecture", "Claude Agent SDK"],
   },
   {
     group: "Frontend",

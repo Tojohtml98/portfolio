@@ -1,6 +1,7 @@
 import { projects, skills, profile } from "./data/projects";
 import ProjectCard from "./components/ProjectCard";
-import tomas from "./assets/tomas.jpg";
+import Hero from "./components/Hero";
+import StickyStory from "./components/StickyStory";
 
 export default function App() {
   return (
@@ -18,35 +19,9 @@ export default function App() {
       </header>
 
       <main id="top">
-        {/* hero */}
-        <section className="hero">
-          <div className="wrap hero-grid">
-            <div className="hero-text">
-              <p className="eyebrow">{profile.role}</p>
-              <h1>
-                Construyo <em>APIs sólidas</em> en Node.js, con tests y arquitectura limpia.
-              </h1>
-              <p className="pitch">
-                Soy Tomás, desarrollador full-stack con foco en backend. Me interesa el
-                craft: auth bien hecha, capas que no se pisan, tests de integración y
-                deploys que un reclutador puede abrir en un click.
-              </p>
-              <p className="meta">
-                <span>{profile.location}</span> · stack principal Node · Express · MongoDB · React
-              </p>
-              <div className="actions">
-                <a className="btn btn-primary" href="#projects">Ver proyectos</a>
-                <a className="btn btn-ghost" href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
-                <a className="btn btn-ghost" href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
-              </div>
-            </div>
-            <div className="hero-photo">
-              <div className="photo-frame">
-                <img src={tomas} alt="Tomás Orella" loading="eager" />
-              </div>
-            </div>
-          </div>
-        </section>
+        <Hero />
+
+        <StickyStory />
 
         {/* projects */}
         <section id="projects">

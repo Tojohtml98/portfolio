@@ -2,6 +2,7 @@ import { projects, skills, profile } from "./data/projects";
 import ProjectIndex from "./components/ProjectIndex";
 import Hero from "./components/Hero";
 import StickyStory from "./components/StickyStory";
+import StatBand from "./components/StatBand";
 
 export default function App() {
   return (
@@ -21,6 +22,8 @@ export default function App() {
       <main id="top">
         <Hero />
 
+        <StatBand />
+
         <StickyStory />
 
         {/* projects */}
@@ -29,7 +32,7 @@ export default function App() {
             <p className="eyebrow">Trabajo</p>
             <h2 className="section-title">Proyectos en producción</h2>
             <p className="section-lead">
-              Siete proyectos reales, todos desplegados y accesibles. El foco está en el
+              Siete proyectos reales, seis desplegados y accesibles. El foco está en el
               backend: cómo está construido cada pieza importa más que cuántos endpoints tiene.
             </p>
             <ProjectIndex projects={projects} />

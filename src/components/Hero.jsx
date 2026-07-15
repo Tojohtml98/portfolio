@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { Fragment, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { profile } from "../data/projects";
 import tomas from "../assets/tomas.jpg";
@@ -24,17 +24,19 @@ function H1() {
   return (
     <motion.h1 variants={wordStagger} initial="hidden" animate="show" aria-label="APIs sólidas en Node.js">
       {parts.map((p, i) => (
-        <motion.span
-          key={i}
-          className="word"
-          variants={fadeBlur}
-          transition={{ duration: 0.7, ease: [0.2, 0.7, 0.2, 1] }}
-        >
-          {p.cls === "i" && <i>{p.t}</i>}
-          {p.cls === "em" && <em>{p.t}</em>}
-          {p.cls === "" && p.t}
+        <Fragment key={i}>
+          <motion.span
+            className="word"
+            variants={fadeBlur}
+            transition={{ duration: 0.7, ease: [0.2, 0.7, 0.2, 1] }}
+          >
+            {p.cls === "i" && <i>{p.t}</i>}
+            {p.cls === "em" && <em>{p.t}</em>}
+            {p.cls === "" && p.t}
+          </motion.span>
+          {/* el espacio va FUERA del span: dentro de un inline-block se colapsa */}
           {i < parts.length - 1 && " "}
-        </motion.span>
+        </Fragment>
       ))}
     </motion.h1>
   );

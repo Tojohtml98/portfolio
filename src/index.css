@@ -383,6 +383,120 @@ section {
   color: var(--text-dim);
 }
 
+/* ---------- project index (editorial) ---------- */
+.idx {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--border);
+}
+.idx-row {
+  border-bottom: 1px solid var(--border);
+}
+.idx-head {
+  width: 100%;
+  background: none;
+  border: 0;
+  padding: 22px 4px;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 3.2rem 1fr auto 1.4rem;
+  align-items: baseline;
+  gap: 18px;
+}
+.idx-num {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  font-variant-numeric: tabular-nums;
+  transition: color 0.25s ease;
+}
+.idx-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(1.35rem, 3vw, 2.15rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), color 0.25s ease;
+}
+.idx-kind {
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  white-space: nowrap;
+  transition: color 0.25s ease;
+}
+/* el chevron rota a 45° cuando abre: cerrado ↗, abierto → */
+.idx-chev {
+  justify-self: end;
+  align-self: center;
+  width: 11px;
+  height: 11px;
+  border-right: 2px solid var(--text-dim);
+  border-bottom: 2px solid var(--text-dim);
+  transform: rotate(-45deg);
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), border-color 0.25s ease;
+}
+
+.idx-head:hover .idx-title,
+.idx-row.open .idx-title {
+  transform: translateX(10px);
+}
+.idx-row.open .idx-title,
+.idx-head:hover .idx-title {
+  color: var(--amber);
+}
+.idx-row.open .idx-num,
+.idx-head:hover .idx-num {
+  color: var(--amber);
+}
+.idx-row.open .idx-chev {
+  transform: rotate(45deg);
+  border-color: var(--amber);
+}
+.idx-head:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.idx-panel {
+  overflow: hidden;
+}
+.idx-panel-inner {
+  padding: 4px 0 30px calc(3.2rem + 18px);
+  max-width: 68ch;
+}
+.idx .blurb {
+  color: var(--text-soft);
+  margin-bottom: 16px;
+}
+.idx .card-links {
+  margin-top: 0;
+}
+
+@media (max-width: 720px) {
+  .idx-head {
+    grid-template-columns: 2.2rem 1fr 1.2rem;
+    gap: 12px;
+    padding: 18px 2px;
+  }
+  /* en mobile el kind pasa abajo del título, no compite por ancho */
+  .idx-kind {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .idx-panel-inner {
+    padding-left: calc(2.2rem + 12px);
+  }
+}
+
 /* ---------- skills ---------- */
 .skills-grid {
   display: grid;
@@ -552,4 +666,6 @@ footer .wrap {
   .story { height: auto; }
   .story-sticky { position: relative; height: auto; padding: 80px 0; }
   .story-beat { position: relative; inset: auto; margin-bottom: 24px; }
+  .idx-title, .idx-chev { transition: color 0.25s ease, border-color 0.25s ease; }
+  .idx-head:hover .idx-title, .idx-row.open .idx-title { transform: none; }
 }

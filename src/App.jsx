@@ -3,8 +3,14 @@ import ProjectIndex from "./components/ProjectIndex";
 import Hero from "./components/Hero";
 import StickyStory from "./components/StickyStory";
 import StatBand from "./components/StatBand";
+import { useWarmBackends } from "./hooks/useWarmBackends";
+
+// backends en free tier: se despiertan al entrar en viewport la sección de proyectos
+const COLD_BACKENDS = projects.filter((p) => p.cold && p.live).map((p) => p.live);
 
 export default function App() {
+  const projectsRef = useWarmBackends(COLD_BACKENDS);
+
   return (
     <>
       <header className="nav">
@@ -27,7 +33,7 @@ export default function App() {
         <StickyStory />
 
         {/* projects */}
-        <section id="projects">
+        <section id="projects" ref={projectsRef}>
           <div className="wrap">
             <p className="eyebrow">Trabajo</p>
             <h2 className="section-title">Proyectos en producción</h2>

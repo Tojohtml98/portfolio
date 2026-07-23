@@ -37,9 +37,28 @@ npm run preview  # sirve el build localmente
 
 ```
 src/
-├── data/projects.js      # única fuente de verdad: proyectos, skills, perfil
+├── data/projects.js          # única fuente de verdad: proyectos, skills, perfil
 ├── components/
-│   └── ProjectCard.jsx
-├── App.jsx               # secciones: hero · proyectos · skills · contacto
-└── index.css            # design system
+│   ├── Hero.jsx              # hero animado
+│   ├── StatBand.jsx          # franja de números
+│   ├── StickyStory.jsx       # scrollytelling
+│   ├── ProjectIndex.jsx      # índice editorial de proyectos
+│   ├── ProjectCard.jsx
+│   └── MagneticButton.jsx
+├── hooks/useWarmBackends.js  # despierta las APIs de Render antes del click
+├── App.jsx                   # secciones: hero · proyectos · skills · contacto
+└── index.css                 # design system
 ```
+
+## Detalle: cold start de los backends
+
+Las cuatro APIs corren en el free tier de Render, que apaga la instancia tras 15 minutos sin
+tráfico; el primer request después tarda cerca de un minuto. En vez de dejar que el visitante
+se coma esa espera, `useWarmBackends` dispara un request a cada backend cuando la sección de
+proyectos entra en viewport: para cuando termina de leer y hace click, la instancia ya está
+levantada.
+
+No hay un cron manteniéndolas siempre despiertas a propósito: Render otorga **750 horas de
+free tier por workspace y por mes, compartidas entre todos los servicios**. Tres APIs
+encendidas 24/7 son 2160 h/mes y Render suspendería todas a mitad de mes. Despertarlas
+únicamente cuando hay una visita real gasta cuota exactamente cuando aporta algo.

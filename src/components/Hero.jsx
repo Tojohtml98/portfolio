@@ -102,6 +102,13 @@ export default function Hero() {
             <MagneticButton href={profile.linkedin} className="btn btn-ghost" external>
               LinkedIn
             </MagneticButton>
+            <MagneticButton
+              href="/Tomas-Orella-CV.pdf"
+              className="btn btn-ghost"
+              download="Tomas-Orella-CV.pdf"
+            >
+              Descargar CV
+            </MagneticButton>
           </motion.div>
         </div>
         <HeroPhoto />

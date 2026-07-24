@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Tomás Orella — CV</title>
+<style>
+  :root { --ink:#1a1a1a; --mut:#6b7280; --line:#e5e7eb; --accent:#2563eb; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body {
+    font-family:'Inter',-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); font-size:10.3px; line-height:1.4; padding:34px 40px; max-width:820px; margin:0 auto;
+  }
+  header { display:flex; justify-content:space-between; align-items:flex-start; gap:24px; }
+  h1 { font-size:26px; font-weight:700; letter-spacing:-.01em; }
+  .tagline { color:var(--mut); font-size:11px; margin-top:3px; }
+  .contact { text-align:right; font-size:9.6px; color:var(--mut); line-height:1.7; white-space:nowrap; }
+  .contact a { color:var(--mut); text-decoration:none; }
+  hr { border:none; border-top:1.5px solid var(--ink); margin:12px 0 0; }
+  section { margin-top:13px; }
+  .stitle { font-size:9px; letter-spacing:.16em; color:var(--mut); font-weight:600; margin-bottom:8px; }
+  .prof { font-size:10.6px; line-height:1.5; }
+  .proj { margin-bottom:8px; }
+  .prow { display:flex; justify-content:space-between; align-items:baseline; gap:10px; }
+  .pname { font-weight:700; font-size:11px; }
+  .pkind { color:var(--mut); font-weight:400; font-size:9.5px; margin-left:6px; }
+  .plinks { font-size:9.5px; color:var(--accent); white-space:nowrap; }
+  .plinks a { color:var(--accent); text-decoration:none; }
+  .pdesc { color:#374151; margin:2px 0 3px; }
+  .tags { display:flex; flex-wrap:wrap; gap:4px; }
+  .tag { font-size:8.4px; color:var(--mut); border:1px solid var(--line); border-radius:4px; padding:1px 5px; }
+  .srow { display:grid; grid-template-columns:112px 1fr; gap:8px; margin-bottom:4px; }
+  .slabel { font-weight:700; font-size:9.8px; }
+  .sitems { color:#374151; }
+  .edu { display:flex; justify-content:space-between; gap:16px; }
+  .edu div { flex:1; }
+  @page { size:A4; margin:0; }
+</style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Tomás Orella</h1>
+      <div class="tagline">Desarrollador Full-Stack Junior · Enfoque Backend · Argentina</div>
+    </div>
+    <div class="contact">
+      tojoorella@gmail.com<br />
+      <a href="https://linkedin.com/in/tomasorella">linkedin.com/in/tomasorella</a><br />
+      <a href="https://github.com/Tojohtml98">github.com/Tojohtml98</a><br />
+      <a href="https://portfolio-pied-one-4hquhnqev3.vercel.app">portfolio</a>
+    </div>
+  </header>
+  <hr />
+
+  <section>
+    <div class="stitle">PERFIL</div>
+    <div class="prof">
+      Desarrollador full-stack JavaScript/TypeScript con enfoque en backend. Construyo y despliego APIs REST completas
+      con Node.js, Express y TypeScript — autenticación JWT con rotación de refresh tokens, arquitectura en capas / limpia,
+      testing de integración (Jest + Supertest), documentación OpenAPI y Docker. También trabajo con PostgreSQL y
+      Python / FastAPI. Todos los proyectos están desplegados y accesibles. Busco mi primer puesto junior remoto o híbrido.
+    </div>
+  </section>
+
+  <section>
+    <div class="stitle">PROYECTOS</div>
+
+    <div class="proj">
+      <div class="prow">
+        <div><span class="pname">Code Reviewer Agent</span><span class="pkind">IA · CLI</span></div>
+        <div class="plinks"><a href="https://github.com/Tojohtml98/code-reviewer-agent">GitHub</a></div>
+      </div>
+      <div class="pdesc">CLI que revisa tus cambios de git como un senior — bugs, seguridad y claridad — construida sobre el Claude Agent SDK. Herramientas de solo lectura (Read/Grep/Glob) con permisos controlados vía <code>canUseTool</code>, con la review en streaming a la terminal.</div>
+      <div class="tags"><span class="tag">Node.js</span><span class="tag">Claude Agent SDK</span><span class="tag">ESM</span><span class="tag">CLI</span></div>
+    </div>
+
+    <div class="proj">
+      <div class="prow">
+        <div><span class="pname">TaskFlow API</span><span class="pkind">Backend · TypeScript</span></div>
+        <div class="plinks"><a href="https://taskflow-api-mti1.onrender.com">En vivo</a> · <a href="https://github.com/Tojohtml98/taskflow-api">GitHub</a></div>
+      </div>
+      <div class="pdesc">API REST de gestión de tareas migrada entera a TypeScript. Auth JWT con rotación de refresh tokens, arquitectura en capas estricta (Route → Controller → Service → Repository) y 30 tests de integración corriendo en CI.</div>
+      <div class="tags"><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">JWT</span><span class="tag">Jest</span><span class="tag">Docker</span></div>
+    </div>
+
+    <div class="proj">
+      <div class="prow">
+        <div><span class="pname">Ecommerce API · Políglota</span><span class="pkind">Backend · Microservicios</span></div>
+        <div class="plinks"><a href="https://nodejs-ecommerce-api-oqbu.onrender.com">En vivo</a> · <a href="https://github.com/Tojohtml98/Nodejs-Ecommerce-API">GitHub</a></div>
+      </div>
+      <div class="pdesc">El mismo dominio de ecommerce resuelto en tres tecnologías: Node + MongoDB, una capa relacional en PostgreSQL (transacciones, <code>SELECT … FOR UPDATE</code> para descontar stock sin race conditions) y un microservicio de analytics en Python / FastAPI sobre los mismos datos.</div>
+      <div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">PostgreSQL</span><span class="tag">Python</span><span class="tag">FastAPI</span></div>
+    </div>
+
+    <div class="proj">
+      <div class="prow">
+        <div><span class="pname">Scalable Backend API</span><span class="pkind">Backend</span></div>
+        <div class="plinks"><a href="https://scalable-backend-api.onrender.com/api/docs">Swagger</a> · <a href="https://github.com/Tojohtml98/Scalable-Backend-API">GitHub</a></div>
+      </div>
+      <div class="pdesc">API de usuarios, mascotas y adopciones con documentación OpenAPI 3 completa (Swagger UI), endpoints de mocking con Faker para generar datos de prueba, hasheo de contraseñas con bcrypt y tests de integración con Jest + Supertest.</div>
+      <div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">Swagger</span><span class="tag">Faker</span><span class="tag">Jest</span><span class="tag">Docker</span></div>
+    </div>
+
+    <div class="proj">
+      <div class="prow">
+        <div><span class="pname">Clean Architecture API</span><span class="pkind">Backend</span></div>
+        <div class="plinks"><a href="https://nodejs-clean-architecture-api.onrender.com">En vivo</a> · <a href="https://github.com/Tojohtml98/Nodejs-Clean-Architecture-API">GitHub</a></div>
+      </div>
+      <div class="pdesc">API Node.js estructurada según la Dependency Rule: entidades, casos de uso y adaptadores desacoplados del framework y la base de datos.</div>
+      <div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Clean Architecture</span><span class="tag">MongoDB</span></div>
+    </div>
+
+    <div class="proj">
+      <div class="prow">
+        <div><span class="pname">TaskFlow Client</span><span class="pkind">Frontend</span></div>
+        <div class="plinks"><a href="https://taskflow-client-nu.vercel.app">En vivo</a> · <a href="https://github.com/Tojohtml98/taskflow-client">GitHub</a></div>
+      </div>
+      <div class="pdesc">Cliente React + Vite para la TaskFlow API: flujo de auth por tokens, UI de gestión de tareas, empty states cuidados y deploy en producción en Vercel.</div>
+      <div class="tags"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">JavaScript</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="stitle">HABILIDADES</div>
+    <div class="srow"><div class="slabel">Backend</div><div class="sitems">Node.js, Express, TypeScript, Python, FastAPI, MongoDB, PostgreSQL, Mongoose, JWT, REST APIs, Clean Architecture, Claude Agent SDK</div></div>
+    <div class="srow"><div class="slabel">Frontend</div><div class="sitems">React, Vite, JavaScript, HTML, CSS, Firebase</div></div>
+    <div class="srow"><div class="slabel">Testing y Deploy</div><div class="sitems">Jest, Supertest, Swagger / OpenAPI, Docker, Vercel, Render, MongoDB Atlas, Git / GitHub, CI (GitHub Actions)</div></div>
+  </section>
+
+  <section>
+    <div class="stitle">EDUCACIÓN E IDIOMA</div>
+    <div class="edu">
+      <div><strong>Desarrollador Full-Stack</strong> — Coderhouse</div>
+      <div><strong>Inglés</strong> — B2 Upper-Intermediate</div>
+      <div>Cómodo leyendo docs, escribiendo mensajes de commit y comunicación async.</div>
+    </div>
+  </section>
+</body>
+</html>

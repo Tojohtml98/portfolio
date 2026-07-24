@@ -4,7 +4,7 @@ import { motion, useMotionValue, useSpring } from "motion/react";
 const STRENGTH = 0.35;
 const RADIUS = 90;
 
-export default function MagneticButton({ href, className, external, children }) {
+export default function MagneticButton({ href, className, external, download, children }) {
   const ref = useRef(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -33,6 +33,7 @@ export default function MagneticButton({ href, className, external, children }) 
   }
 
   const props = external ? { target: "_blank", rel: "noreferrer" } : {};
+  if (download) props.download = download === true ? "" : download;
   return (
     <motion.a
       ref={ref}

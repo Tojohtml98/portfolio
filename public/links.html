@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Tomás Orella — Links</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Full-Stack Dev Jr. — portfolio, GitHub, LinkedIn, redes y CV.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:title" content="Tomás Orella">
+<meta property="og:description" content="Full-Stack Dev Jr. — todos mis links en un solo lugar.">
+<meta property="og:image" content="/og.png">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#141210;
+    --bg-2:#1b1815;
+    --card:#1c1916;
+    --ink:#f3ede4;
+    --ink-dim:#a89f92;
+    --amber:#e2a23b;
+    --amber-soft:rgba(226,162,59,.14);
+    --line:rgba(243,237,228,.10);
+    --green:#7cc576;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+
+  body{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:48px 20px;
+    overflow:hidden;
+    background:
+      radial-gradient(900px 520px at 78% -6%, rgba(226,162,59,.13), transparent 62%),
+      radial-gradient(700px 460px at 8% 108%, rgba(168,84,38,.11), transparent 60%),
+      radial-gradient(1200px 800px at 50% 45%, var(--bg-2), var(--bg) 70%);
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ink);
+  }
+
+  /* fine grid, fading toward the edges */
+  body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background-image:
+      linear-gradient(rgba(243,237,228,.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(243,237,228,.05) 1px, transparent 1px);
+    background-size:44px 44px;
+    mask-image:radial-gradient(ellipse 65% 55% at 50% 38%, black 30%, transparent 85%);
+    -webkit-mask-image:radial-gradient(ellipse 65% 55% at 50% 38%, black 30%, transparent 85%);
+  }
+
+  /* subtle film grain for depth, avoids a flat/plastic gradient */
+  body::after{
+    content:'';
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    opacity:.05;
+    mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  .card{
+    position:relative;
+    z-index:1;
+    width:100%;
+    max-width:420px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:24px;
+    padding:44px 32px 32px;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,.55);
+    text-align:center;
+    animation:rise .6s cubic-bezier(.2,.8,.2,1);
+  }
+
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  .avatar{
+    width:84px;height:84px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    object-fit:cover;
+    border:1.5px solid rgba(226,162,59,.55);
+    box-shadow:0 0 0 5px var(--amber-soft);
+    display:block;
+  }
+
+  h1{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:26px;
+    letter-spacing:.2px;
+  }
+  h1 em{ color:var(--amber); font-style:italic; font-weight:500; }
+
+  .role{
+    margin-top:8px;
+    font-size:13.5px;
+    color:var(--ink-dim);
+  }
+
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    margin:18px 0 28px;
+    padding:7px 14px;
+    border-radius:999px;
+    background:rgba(124,197,118,.10);
+    border:1px solid rgba(124,197,118,.30);
+    font-size:12.5px;
+    color:#bfe6ba;
+  }
+  .dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(124,197,118,.18);}
+
+  .links{ display:flex; flex-direction:column; gap:10px; text-align:left; }
+
+  .link{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    padding:13px 16px;
+    border-radius:13px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.015);
+    color:var(--ink);
+    text-decoration:none;
+    font-size:14.5px;
+    font-weight:500;
+    transition:border-color .18s ease, background .18s ease, transform .18s ease;
+  }
+  .link:hover{
+    border-color:rgba(226,162,59,.5);
+    background:var(--amber-soft);
+    transform:translateX(3px);
+  }
+  .link .ic{
+    width:32px;height:32px;flex:none;
+    border-radius:9px;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(243,237,228,.06);
+  }
+  .link .ic svg{width:16px;height:16px;stroke:var(--ink);}
+  .link.primary{
+    border-color:rgba(226,162,59,.45);
+    background:var(--amber-soft);
+  }
+  .link.primary .ic{ background:rgba(226,162,59,.22); }
+  .link.primary .ic svg{ stroke:var(--amber); }
+  .link .sub{ display:block; font-size:11.5px; color:var(--ink-dim); font-weight:400; margin-top:1px; }
+
+  footer{
+    margin-top:30px;
+    font-size:11.5px;
+    color:var(--ink-dim);
+    letter-spacing:.3px;
+  }
+  footer span{ color:var(--amber); }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <img class="avatar" src="/tomas-avatar.jpg" alt="Tomás Orella">
+    <h1>Tomás <em>Orella</em></h1>
+    <p class="role">Full-Stack Dev Jr. — Node.js · React · MongoDB</p>
+
+    <div class="badge"><span class="dot"></span> Disponible para trabajar</div>
+
+    <div class="links">
+      <a class="link primary" href="https://portfolio-pied-one-4hquhnqev3.vercel.app" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></span>
+        <span>Portfolio<span class="sub">7 proyectos, código y demos en vivo</span></span>
+      </a>
+      <a class="link" href="https://github.com/Tojohtml98" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></span>
+        <span>GitHub<span class="sub">@Tojohtml98</span></span>
+      </a>
+      <a class="link" href="https://linkedin.com/in/tomasorella" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v1.5A5.98 5.98 0 0 1 16 8Z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="1.5"/></svg></span>
+        <span>LinkedIn<span class="sub">/in/tomasorella</span></span>
+      </a>
+      <a class="link" href="https://www.instagram.com/tomasorelladev" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="var(--ink)" stroke="none"/></svg></span>
+        <span>Instagram<span class="sub">@tomasorelladev</span></span>
+      </a>
+      <a class="link" href="https://www.tiktok.com/@tomasorelladev" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3v9.5a3.5 3.5 0 1 1-3.5-3.5H13"/><path d="M16 3c.3 2.3 1.9 4 4 4.2"/></svg></span>
+        <span>TikTok<span class="sub">@tomasorelladev</span></span>
+      </a>
+      <a class="link" href="https://x.com/toma36758" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 4 16 16M20 4 4 20"/></svg></span>
+        <span>X / Twitter<span class="sub">@toma36758</span></span>
+      </a>
+      <a class="link" href="/Tomas-Orella-CV.pdf" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M12 18v-6M9.5 15.5 12 18l2.5-2.5"/></svg></span>
+        <span>Descargar CV<span class="sub">PDF · Español / English</span></span>
+      </a>
+      <a class="link" href="mailto:tojoorella@gmail.com">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span>
+        <span>Escribime<span class="sub">tojoorella@gmail.com</span></span>
+      </a>
+    </div>
+
+    <footer>Tandil, Argentina · <span>build in public</span></footer>
+  </div>
+
+</body>
+</html>

@@ -1,7 +1,24 @@
 # CHANGELOG — CV Tomás Orella
 
-Diff del CV nuevo (2026-07-24) respecto del **CV anterior servido** (versión 2026-05-26: 5 proyectos, sin TypeScript).
-Fuente estable: `cv/cv-en.html` · `cv/cv-es.html` → PDFs con Chrome headless (`--no-pdf-header-footer`).
+## 2026-08-23 — Rediseño visual + fix de bug crítico (archivo del sitio en vivo desactualizado)
+
+### 🔧 Estructural / formato
+- Rediseño completo del CSS: tipografía Inter/sans-serif (antes serif centrado), paleta nueva
+  `#1d5fbf`/`#0f172a`/`#64748b`, texto alineado a la izquierda (antes justificado), header en
+  flexbox con bloque de contacto alineado a la derecha, entradas de proyecto con borde-acento
+  a la izquierda. Sin cambios estructurales de contenido — mismo texto, mismas métricas.
+- Aplicado igual en `cv-es.html`, `cv-en.html` y `cv-ai.html` (paths SVG de íconos verificados
+  byte-idénticos entre los tres).
+- `{{TEL}}` reemplazado por el teléfono real en el HTML fuente; `build.sh` ya no necesita el
+  argumento de teléfono ni `sed`, y usa `flatpak run com.google.Chrome` (el binario nativo
+  `google-chrome` ya no existe en el sistema).
+
+### ⚠️ Bug encontrado y corregido
+- **`public/Tomas-Orella-CV.pdf`** (el archivo que sirve el botón "Descargar CV" del sitio en
+  vivo) tenía fecha de creación **24 de julio de 2026** — más de un mes desactualizado, sin la
+  reescritura del 13/08 basada en evidencia (46 tests/97% cobertura TaskFlow, 167 tests Turnero).
+  Cualquiera que descargó el CV desde el portfolio en ese período recibió una versión vieja.
+  Corregido: sincronizado con el HTML/PDF fuente actual.
 
 ---
 

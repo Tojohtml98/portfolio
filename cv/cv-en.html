@@ -1,139 +1,90 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<title>Tomás Orella — CV</title>
+<meta charset="utf-8">
+<title>Tomas Orella — Resume</title>
 <style>
-  :root { --ink:#1a1a1a; --mut:#6b7280; --line:#e5e7eb; --accent:#2563eb; }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  html { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
-  body {
-    font-family:'Inter',-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
-    color:var(--ink); font-size:10.3px; line-height:1.4; padding:34px 40px; max-width:820px; margin:0 auto;
-  }
-  header { display:flex; justify-content:space-between; align-items:flex-start; gap:24px; }
-  h1 { font-size:26px; font-weight:700; letter-spacing:-.01em; }
-  .tagline { color:var(--mut); font-size:11px; margin-top:3px; }
-  .contact { text-align:right; font-size:9.6px; color:var(--mut); line-height:1.7; white-space:nowrap; }
-  .contact a { color:var(--mut); text-decoration:none; }
-  hr { border:none; border-top:1.5px solid var(--ink); margin:12px 0 0; }
-  section { margin-top:13px; }
-  .stitle { font-size:9px; letter-spacing:.16em; color:var(--mut); font-weight:600; margin-bottom:8px; }
-  .prof { font-size:10.6px; line-height:1.5; }
-  .proj { margin-bottom:8px; }
-  .prow { display:flex; justify-content:space-between; align-items:baseline; gap:10px; }
-  .pname { font-weight:700; font-size:11px; }
-  .pkind { color:var(--mut); font-weight:400; font-size:9.5px; margin-left:6px; }
-  .plinks { font-size:9.5px; color:var(--accent); white-space:nowrap; }
-  .plinks a { color:var(--accent); text-decoration:none; }
-  .pdesc { color:#374151; margin:2px 0 3px; }
-  .tags { display:flex; flex-wrap:wrap; gap:4px; }
-  .tag { font-size:8.4px; color:var(--mut); border:1px solid var(--line); border-radius:4px; padding:1px 5px; }
-  .srow { display:grid; grid-template-columns:112px 1fr; gap:8px; margin-bottom:4px; }
-  .slabel { font-weight:700; font-size:9.8px; }
-  .sitems { color:#374151; }
-  .edu { display:flex; justify-content:space-between; gap:16px; }
-  .edu div { flex:1; }
-  @page { size:A4; margin:0; }
+  body { font-family: Inter, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 8.6pt; line-height: 1.4; color: #1f2430; margin: 0; }
+  a { color: #1d5fbf; text-decoration: none; }
+
+  header { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; }
+  .name { font-size: 20pt; font-weight: 800; letter-spacing: -.3px; color: #0f172a; }
+  .role { font-size: 9.3pt; font-weight: 600; color: #1d5fbf; margin-top: 2px; }
+  .contact { text-align: right; font-size: 7.7pt; color: #4b5563; line-height: 1.7; }
+  .contact .item { white-space: nowrap; display: block; }
+  .contact svg { width: 8px; height: 8px; fill: #1d5fbf; vertical-align: -1px; margin-right: 3px; }
+  .contact a { color: #4b5563; }
+  .rule { border: 0; border-top: 2px solid #0f172a; margin: 6px 0 4px; }
+
+  h2 { font-size: 8.3pt; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: #64748b; margin: 9px 0 4px; padding-bottom: 2px; border-bottom: 1px solid #e2e8f0; }
+  p { margin: 0 0 3.5px; text-align: left; }
+
+  .job { font-weight: 700; color: #0f172a; font-size: 8.9pt; margin: 5px 0 2px; border-left: 2.5px solid #1d5fbf; padding-left: 6px; }
+  .job .meta { font-weight: 500; color: #64748b; font-size: 7.7pt; }
+  ul { margin: 0 0 4px; padding-left: 15px; }
+  li { margin-bottom: 2px; text-align: left; }
+  li::marker { color: #1d5fbf; }
+  .lead { font-weight: 700; color: #111827; }
+
+  .edu { display: flex; justify-content: space-between; gap: 16px; font-size: 8.5pt; margin-bottom: 2.5px; }
+  .edu b { color: #0f172a; }
+  .edu .right { font-weight: 600; color: #64748b; white-space: nowrap; }
+
 </style>
-</head>
-<body>
-  <header>
-    <div>
-      <h1>Tomás Orella</h1>
-      <div class="tagline">Junior Full-Stack Developer · Backend Focus · Argentina</div>
-    </div>
-    <div class="contact">
-      tojoorella@gmail.com<br />
-      <a href="https://linkedin.com/in/tomasorella">linkedin.com/in/tomasorella</a><br />
-      <a href="https://github.com/Tojohtml98">github.com/Tojohtml98</a><br />
-      <a href="https://portfolio-pied-one-4hquhnqev3.vercel.app">portfolio</a>
-    </div>
-  </header>
-  <hr />
 
-  <section>
-    <div class="stitle">PROFILE</div>
-    <div class="prof">
-      Junior full-stack JavaScript/TypeScript developer with a backend focus. I build and deploy complete REST APIs
-      with Node.js, Express and TypeScript — JWT auth with refresh-token rotation, layered / clean architecture,
-      integration testing (Jest + Supertest), OpenAPI docs and Docker. I also work with PostgreSQL and Python / FastAPI.
-      Every project below is deployed and reachable. Looking for my first remote or hybrid junior role.
-    </div>
-  </section>
+<header>
+  <div>
+    <div class="name">TOMAS ORELLA</div>
+    <div class="role">Junior Full-Stack Developer (Backend Focus)</div>
+  </div>
+  <div class="contact">
+    <span class="item"><svg viewBox="0 0 384 512"><path d="M172 503C27 293 0 271 0 192 0 86 86 0 192 0s192 86 192 192c0 79-27 101-172 311-10 14-30 14-40 0zm20-231a80 80 0 100-160 80 80 0 000 160z"/></svg>Tandil, Buenos Aires, Argentina</span>
+    <span class="item"><svg viewBox="0 0 512 512"><path d="M164 24c-8-19-28-29-47-24L28 24A48 48 0 000 71C0 315 197 512 441 512c22 0 41-15 46-36l24-89c5-19-5-39-24-47l-96-40c-17-7-36-2-47 12l-40 49a370 370 0 01-178-178l49-40c14-11 19-31 12-47l-40-96z"/></svg>+54 9 2281 414287</span>
+    <span class="item"><svg viewBox="0 0 512 512"><path d="M48 64h416c26 0 48 22 48 48v16L256 275 0 128v-16c0-26 22-48 48-48zM0 176l244 141c8 4 16 4 24 0L512 176v224c0 26-22 48-48 48H48c-26 0-48-22-48-48V176z"/></svg><a href="mailto:tojoorella@gmail.com">tojoorella@gmail.com</a></span>
+    <span class="item"><svg viewBox="0 0 448 512"><path d="M100 448H7V149h93v299zM54 108a54 54 0 110-108 54 54 0 010 108zm394 340h-93V302c0-35-1-79-48-79-48 0-56 38-56 77v148h-93V149h89v41h1c13-23 43-48 88-48 94 0 111 62 111 143v163z"/></svg><a href="https://linkedin.com/in/tomasorella">linkedin.com/in/tomasorella</a></span>
+    <span class="item"><svg viewBox="0 0 496 512"><path d="M165 397c0 2-2 4-5 3-3 0-5-1-5-3s2-4 5-3c3 0 5 1 5 3zm-30-4c-1 2 1 5 4 5 3 1 5 0 6-2s-1-4-4-5c-3-1-5 0-6 2zm42-2c-3 1-5 3-4 5 0 2 3 3 6 3 3-1 5-3 4-5 0-2-3-3-6-3zM244 8C106 8 0 113 0 251c0 110 69 204 167 237 13 3 17-5 17-12v-44c-68 15-82-29-82-29-11-28-27-36-27-36-23-15 2-15 2-15 24 2 37 25 37 25 22 37 57 27 71 20 2-16 8-27 15-33-54-6-111-27-111-121 0-27 10-49 25-66-2-6-11-31 3-65 0 0 20-7 66 25a230 230 0 01120 0c46-32 66-25 66-25 14 34 5 59 3 65 15 17 25 39 25 66 0 94-57 115-111 121 9 8 17 23 17 46v69c0 7 4 15 17 12 98-33 167-127 167-237C488 113 382 8 244 8z"/></svg><a href="https://github.com/Tojohtml98">github.com/Tojohtml98</a></span>
+    <span class="item"><svg viewBox="0 0 496 512"><path d="M248 8a248 248 0 100 496 248 248 0 000-496zm-32 62v45c-15 3-29 8-42 15a290 290 0 01-24-31 199 199 0 0166-29zm64 0c24 6 46 15 66 29a290 290 0 01-24 31c-13-7-27-12-42-15V70zM126 122c8 12 18 24 28 34a220 220 0 00-45 44 200 200 0 01-30-38c14-16 29-30 47-40zm244 0c18 10 33 24 47 40a200 200 0 01-30 38 220 220 0 00-45-44c10-10 20-22 28-34zM248 152c11 0 25 15 36 43-11 3-23 5-36 5s-25-2-36-5c11-28 25-43 36-43zM82 194c11 14 24 27 38 38-9 21-15 45-17 72H50c3-40 15-78 32-110zm332 0c17 32 29 70 32 110h-53c-2-27-8-51-17-72 14-11 27-24 38-38zM145 258c15 8 32 15 50 19-3 8-5 17-6 27h-56c1-17 5-32 12-46zm206 0c7 14 11 29 12 46h-56c-1-10-3-19-6-27 18-4 35-11 50-19zM50 336h53c2 27 8 51 17 72-14 11-27 24-38 38-17-32-29-70-32-110zm139 0h56c1 10 3 19 6 27-18 4-35 11-50 19-7-14-11-29-12-46zm104 0h56c-1 17-5 32-12 46-15-8-32-15-50-19 3-8 5-17 6-27zm100 0h53c-3 40-15 78-32 110-11-14-24-27-38-38 9-21 15-45 17-72zM212 419c11-3 23-5 36-5s25 2 36 5c-11 28-25 43-36 43s-25-15-36-43zm-58 25c13-7 27-12 42-15v45a199 199 0 01-66-29c7-11 15-21 24-31zm188 0c9 10 17 20 24 31a199 199 0 01-66 29v-45c15-3 29-8 42-15z"/></svg>Portfolio: <a href="https://portfolio-pied-one-4hquhnqev3.vercel.app">portfolio-pied-one-4hquhnqev3.vercel.app</a></span>
+  </div>
+</header>
 
-  <section>
-    <div class="stitle">PROJECTS</div>
+<hr class="rule">
 
-    <div class="proj">
-      <div class="prow">
-        <div><span class="pname">Code Reviewer Agent</span><span class="pkind">AI · CLI</span></div>
-        <div class="plinks"><a href="https://github.com/Tojohtml98/code-reviewer-agent">GitHub</a></div>
-      </div>
-      <div class="pdesc">CLI that reviews your git changes like a senior — bugs, security and clarity — built on the Claude Agent SDK. Read-only tools (Read/Grep/Glob) with controlled permissions via <code>canUseTool</code>, streaming the review live to the terminal.</div>
-      <div class="tags"><span class="tag">Node.js</span><span class="tag">Claude Agent SDK</span><span class="tag">ESM</span><span class="tag">CLI</span></div>
-    </div>
+<h2>Profile</h2>
+<p>Junior full-stack developer focused on the backend: REST APIs in Node.js, Express and TypeScript on MongoDB, with React front-ends. I work with layered architecture, automated testing and continuous integration, and everything I build is deployed and publicly reachable so it can be checked. I use AI tools to move faster, but I review, test and understand every line I ship &mdash; the engineering judgement is mine. Looking for my first formal role on a team where I can contribute from day one and grow through real code review. English at B2 level, comfortable working asynchronously with distributed teams.</p>
 
-    <div class="proj">
-      <div class="prow">
-        <div><span class="pname">TaskFlow API</span><span class="pkind">Backend · TypeScript</span></div>
-        <div class="plinks"><a href="https://taskflow-api-mti1.onrender.com">Live</a> · <a href="https://github.com/Tojohtml98/taskflow-api">GitHub</a></div>
-      </div>
-      <div class="pdesc">Task-management REST API migrated entirely to TypeScript. JWT auth with refresh-token rotation, strict layered architecture (Route → Controller → Service → Repository) and 30 integration tests running in CI.</div>
-      <div class="tags"><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">JWT</span><span class="tag">Jest</span><span class="tag">Docker</span></div>
-    </div>
+<h2>Projects</h2>
+<p style="font-size:7.9pt;color:#555;margin:0 0 4px">Personal projects with public source code and live applications. Every figure below is reproducible by running the repository.</p>
 
-    <div class="proj">
-      <div class="prow">
-        <div><span class="pname">Ecommerce API · Polyglot</span><span class="pkind">Backend · Microservices</span></div>
-        <div class="plinks"><a href="https://nodejs-ecommerce-api-oqbu.onrender.com">Live</a> · <a href="https://github.com/Tojohtml98/Nodejs-Ecommerce-API">GitHub</a></div>
-      </div>
-      <div class="pdesc">Same ecommerce domain solved in three technologies: Node + MongoDB, a relational PostgreSQL layer (transactions, <code>SELECT … FOR UPDATE</code> to decrement stock without race conditions) and a Python / FastAPI analytics microservice over the same data.</div>
-      <div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">PostgreSQL</span><span class="tag">Python</span><span class="tag">FastAPI</span></div>
-    </div>
+<div class="job">TaskFlow API &mdash; task and project management REST API <span class="meta">&middot; TypeScript, Express, MongoDB, Jest, Docker &middot; <a href="https://github.com/Tojohtml98/taskflow-api">github.com/Tojohtml98/taskflow-api</a></span></div>
+<ul>
+  <li><span class="lead">Automated testing:</span> 46 integration tests across 4 suites running against an in-memory MongoDB instance; the full suite passes green in roughly 10 seconds, with 97% statement and 99% line coverage.</li>
+  <li><span class="lead">Layered architecture:</span> each module (auth, projects, tasks) is split into routes, controller, service, repository and model, keeping business logic independent of Express and Mongoose.</li>
+  <li><span class="lead">Authentication and security:</span> JWT with refresh-token rotation, bcrypt password hashing, request validation with Zod, security headers via Helmet and rate limiting on the login and registration endpoints.</li>
+  <li><span class="lead">CI and deployment:</span> a GitHub Actions pipeline runs type checking, tests and build on every push and pull request; multi-stage Docker image, deployed on Render and currently live.</li>
+</ul>
 
-    <div class="proj">
-      <div class="prow">
-        <div><span class="pname">Scalable Backend API</span><span class="pkind">Backend</span></div>
-        <div class="plinks"><a href="https://scalable-backend-api.onrender.com/api/docs">Swagger Docs</a> · <a href="https://github.com/Tojohtml98/Scalable-Backend-API">GitHub</a></div>
-      </div>
-      <div class="pdesc">Users, pets and adoptions API with full OpenAPI 3 documentation (Swagger UI), Faker-based mocking endpoints to generate test data, bcrypt password hashing and integration tests with Jest + Supertest.</div>
-      <div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">Swagger</span><span class="tag">Faker</span><span class="tag">Jest</span><span class="tag">Docker</span></div>
-    </div>
+<div class="job">Turnero API &mdash; appointment booking with automated reminders <span class="meta">&middot; TypeScript, Express, MongoDB, node-cron, Nodemailer</span></div>
+<ul>
+  <li><span class="lead">167 passing tests</span> across 9 suites, covering availability calculation, business hours, authentication and a natural-language date parser.</li>
+  <li>Slot engine that derives availability from business hours and existing bookings, plus scheduled cron jobs that send appointment reminders by email.</li>
+</ul>
 
-    <div class="proj">
-      <div class="prow">
-        <div><span class="pname">Clean Architecture API</span><span class="pkind">Backend</span></div>
-        <div class="plinks"><a href="https://nodejs-clean-architecture-api.onrender.com">Live</a> · <a href="https://github.com/Tojohtml98/Nodejs-Clean-Architecture-API">GitHub</a></div>
-      </div>
-      <div class="pdesc">Node.js API structured with the Dependency Rule: entities, use cases and adapters fully decoupled from the framework and the database.</div>
-      <div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Clean Architecture</span><span class="tag">MongoDB</span></div>
-    </div>
+<div class="job">Code Reviewer Agent &mdash; AI-assisted code review CLI <span class="meta">&middot; Node.js, Claude Agent SDK &middot; <a href="https://github.com/Tojohtml98/code-reviewer-agent">github.com/Tojohtml98/code-reviewer-agent</a></span></div>
+<ul>
+  <li>Command-line tool built on Anthropic's agent SDK: it takes a git diff and reports findings on bugs, security and clarity. A concrete example of bringing AI into the workflow while keeping the final decision on the human side.</li>
+</ul>
 
-    <div class="proj">
-      <div class="prow">
-        <div><span class="pname">TaskFlow Client</span><span class="pkind">Frontend</span></div>
-        <div class="plinks"><a href="https://taskflow-client-nu.vercel.app">Live</a> · <a href="https://github.com/Tojohtml98/taskflow-client">GitHub</a></div>
-      </div>
-      <div class="pdesc">React + Vite client for the TaskFlow API: token-based auth flow, task management UI, polished empty states and production deployment on Vercel.</div>
-      <div class="tags"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">JavaScript</span></div>
-    </div>
-  </section>
+<div class="job">Front-ends and deployed applications <span class="meta">&middot; React, Vite, Firebase</span></div>
+<ul>
+  <li>TaskFlow React client consuming my own API (<a href="https://taskflow-client-nu.vercel.app">taskflow-client-nu.vercel.app</a>), a personal portfolio in React + Vite and an e-commerce built with React and Firebase. Four applications currently live across Render and Vercel.</li>
+</ul>
 
-  <section>
-    <div class="stitle">SKILLS</div>
-    <div class="srow"><div class="slabel">Backend</div><div class="sitems">Node.js, Express, TypeScript, Python, FastAPI, MongoDB, PostgreSQL, Mongoose, JWT, REST APIs, Clean Architecture, Claude Agent SDK</div></div>
-    <div class="srow"><div class="slabel">Frontend</div><div class="sitems">React, Vite, JavaScript, HTML, CSS, Firebase</div></div>
-    <div class="srow"><div class="slabel">Testing &amp; Deploy</div><div class="sitems">Jest, Supertest, Swagger / OpenAPI, Docker, Vercel, Render, MongoDB Atlas, Git / GitHub, CI (GitHub Actions)</div></div>
-  </section>
+<h2>Technical Skills</h2>
+<p><span class="lead">Backend:</span> Node.js, Express, TypeScript, JavaScript, MongoDB, Mongoose, REST APIs, JWT and refresh tokens, bcrypt, Zod, Helmet, rate limiting, structured logging with Pino.</p>
+<p><span class="lead">Testing and quality:</span> Jest, Supertest, integration testing, mongodb-memory-server, code coverage, layered architecture, strict type checking.</p>
+<p><span class="lead">Frontend:</span> React, Vite, HTML and CSS, REST API consumption, Firebase.</p>
+<p><span class="lead">Infrastructure and tooling:</span> Docker and multi-stage builds, docker-compose, GitHub Actions, Git and GitHub, deployment on Render and Vercel, Linux.</p>
+<p><span class="lead">Applied AI:</span> Claude Agent SDK, integrating assistants into the development workflow with human review and validation of everything generated.</p>
+<p><span class="lead">Languages:</span> Spanish (native) &middot; English B2 (professional working proficiency, written and spoken).</p>
 
-  <section>
-    <div class="stitle">EDUCATION &amp; LANGUAGE</div>
-    <div class="edu">
-      <div><strong>Full-Stack Developer</strong> — Coderhouse</div>
-      <div><strong>English</strong> — B2 Upper-Intermediate</div>
-      <div>Comfortable reading docs, writing commit messages and async communication.</div>
-    </div>
-  </section>
-</body>
-</html>
+<h2>Education</h2>
+<div class="edu"><span><b>Coderhouse</b> &mdash; Full-Stack Development Program</span><span class="right">Completed</span></div>
+<div class="edu"><span><b>English</b> &mdash; B2 upper-intermediate</span><span class="right">Professional working proficiency</span></div>
+<div class="edu"><span><b>Continuous learning</b> &mdash; testing, software architecture and backend best practices, applied to the projects above</span><span class="right">Ongoing</span></div>

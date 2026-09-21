@@ -110,6 +110,50 @@ export const projects = [
     code: "https://github.com/Tojohtml98/React-Firebase-Ecommerce",
     cold: false,
   },
+  {
+    title: "Expense Tracker",
+    kind: "Full-Stack",
+    featured: false,
+    blurb:
+      "Tracker de gastos personal con CRUD completo y resumen por mes y categoría — pensado para uso real en el día a día, no de tutorial.",
+    highlights: [
+      "Backend Node/Express 5 + Mongoose 9 con agregación de Mongo para el resumen mensual, tests Jest + Supertest",
+      "Frontend React + Vite sin librerías externas, hook custom useExpenses, tests Vitest + Testing Library",
+      "Dockerizado por servicio (api + client + mongo), responsive verificado en iPhone",
+    ],
+    stack: ["Node.js", "Express", "MongoDB", "Mongoose", "React", "Vite", "Jest", "Docker"],
+    live: "https://expense-tracker-fawn-ten-40.vercel.app",
+    code: "https://github.com/Tojohtml98/expense-tracker",
+    cold: true,
+  },
+  {
+    title: "Emily Layus — Inmobiliaria",
+    kind: "Freelance · Frontend",
+    featured: false,
+    blurb:
+      "Sitio para una clienta real: migración completa de 15 propiedades y 65 fotos a base y hosting propios, sin downtime para el negocio.",
+    highlights: [
+      "Migración de datos e imágenes vía API REST desde el sitio viejo a un proyecto Supabase nuevo",
+      "Panel admin para que la clienta cargue propiedades sin tocar código",
+    ],
+    stack: ["JavaScript", "Supabase", "Netlify"],
+    live: "https://emilylayus-inmobiliaria.netlify.app",
+    cold: false,
+  },
+  {
+    title: "Agenda de Contenido",
+    kind: "Frontend · PWA",
+    featured: false,
+    blurb:
+      "Planificador de posts para LinkedIn e Instagram, instalable como PWA — resuelve un problema propio: contenido escrito que nunca se publicaba.",
+    highlights: [
+      "Estados de post (idea → borrador → listo → publicado), agrupados por fecha con aviso de atraso",
+      "TypeScript de punta a punta, persistencia local, exporta/importa JSON",
+    ],
+    stack: ["React", "TypeScript", "Vite", "PWA"],
+    live: "https://content-planner-flax.vercel.app",
+    cold: false,
+  },
 ];
 
 export const skills = [

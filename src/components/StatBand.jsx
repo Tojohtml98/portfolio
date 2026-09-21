@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 
 // Números verificables contra data/projects.js — si cambia el portfolio, cambian acá.
 const stats = [
-  { value: "7", label: "proyectos con código público" },
-  { value: "6", label: "desplegados y accesibles" },
+  { value: "8", label: "proyectos con código público" },
+  { value: "9", label: "desplegados y accesibles" },
   { value: "30", label: "tests de integración en verde" },
   { value: "3", label: "tecnologías sobre un mismo dominio" },
 ];

@@ -21,9 +21,9 @@ export const projects = [
     kind: "Backend · TypeScript",
     featured: true,
     blurb:
-      "REST API de gestión de tareas migrada entera a TypeScript: autenticación JWT con rotación de refresh tokens, arquitectura en capas estricta y 30 tests de integración.",
+      "REST API de gestión de tareas migrada entera a TypeScript: autenticación JWT con rotación de refresh tokens, arquitectura en capas estricta y 46 tests de integración (97% de cobertura).",
     highlights: [
-      "Migrada de JavaScript a TypeScript con tipado estricto (dominio, req.user, servicios); los 30 tests siguen en verde",
+      "Migrada de JavaScript a TypeScript con tipado estricto (dominio, req.user, servicios); los tests siguen en verde (hoy son 46, en CI)",
       "Auth stateless: access 15m + refresh con rotación e invalidación al logout",
       "Pipeline Route → Controller → Service → Repository → Model",
     ],
@@ -73,7 +73,7 @@ export const projects = [
     highlights: [
       "Capa PostgreSQL: schema relacional, JOINs, transacciones y SELECT … FOR UPDATE para descontar stock sin race conditions",
       "Microservicio Python (FastAPI + Pydantic, async) de lectura y métricas sobre la misma base: microservicios políglotas",
-      "API original Node + Express + MongoDB con catálogo, carrito y órdenes",
+      "API original Node + Express + MongoDB con productos y carritos",
     ],
     stack: ["Node.js", "Express", "MongoDB", "PostgreSQL", "Python", "FastAPI", "Docker"],
     live: "https://nodejs-ecommerce-api-oqbu.onrender.com",

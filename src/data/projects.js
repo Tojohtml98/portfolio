@@ -21,9 +21,10 @@ export const projects = [
     kind: "Backend · TypeScript",
     featured: true,
     blurb:
-      "REST API de gestión de tareas migrada entera a TypeScript: autenticación JWT con rotación de refresh tokens, arquitectura en capas estricta y 46 tests de integración (97% de cobertura).",
+      "REST API de gestión de tareas migrada entera a TypeScript: autenticación JWT con rotación de refresh tokens, arquitectura en capas estricta, modo invitado y 55 tests de integración (97% de cobertura).",
     highlights: [
-      "Migrada de JavaScript a TypeScript con tipado estricto (dominio, req.user, servicios); los tests siguen en verde (hoy son 46, en CI)",
+      "Migrada de JavaScript a TypeScript con tipado estricto (dominio, req.user, servicios); los tests siguen en verde (hoy son 55, en CI)",
+      "Modo invitado: cuenta temporal con datos de ejemplo, aislada por visitante y borrada sola a las 24 h",
       "Auth stateless: access 15m + refresh con rotación e invalidación al logout",
       "Pipeline Route → Controller → Service → Repository → Model",
     ],
@@ -87,6 +88,7 @@ export const projects = [
     blurb:
       "Cliente React + Vite que consume la TaskFlow API: login, gestión de tareas y estados, desplegado en Vercel.",
     highlights: [
+      "Entrada como invitado en un clic, a un tablero con proyectos de ejemplo",
       "Consume la TaskFlow API con auth por tokens",
       "UI con dot-grid y empty states cuidados",
     ],

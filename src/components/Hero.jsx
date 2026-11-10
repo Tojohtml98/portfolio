@@ -1,7 +1,8 @@
 import { Fragment, useRef } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { profile } from "../data/projects";
-import tomas from "../assets/tomas.jpg";
+import tomas480 from "../assets/tomas-480.webp";
+import tomas800 from "../assets/tomas-800.webp";
 import MagneticButton from "./MagneticButton";
 
 const fadeBlur = {
@@ -71,7 +72,16 @@ function HeroPhoto() {
       transition={{ duration: 0.6, ease: [0.2, 0.7, 0.2, 1], delay: 0.08 }}
     >
       <div ref={ref} className="photo-frame" onMouseMove={onMouseMove}>
-        <img src={tomas} alt="Tomás Orella" loading="eager" />
+        <img
+          src={tomas800}
+          srcSet={`${tomas480} 480w, ${tomas800} 800w`}
+          sizes="320px"
+          width="800"
+          height="997"
+          alt="Tomás Orella"
+          loading="eager"
+          fetchPriority="high"
+        />
         <div className="photo-spot" aria-hidden="true" />
       </div>
     </motion.div>

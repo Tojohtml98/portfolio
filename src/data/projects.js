@@ -100,10 +100,10 @@ export const projects = [
     kind: "Frontend",
     featured: false,
     blurb:
-      "Ecommerce de mates y termos hecho con React + Firebase: catálogo, carrito y checkout sobre un catálogo mock.",
+      "Tienda online de mates hecha con React + Vite: catálogo con búsqueda, carrito que se guarda entre visitas y checkout. Lighthouse móvil: 95 en rendimiento, 100 en accesibilidad y SEO.",
     highlights: [
-      "Catálogo y carrito con estado en React",
-      "Backend con Firebase",
+      "Búsqueda que ignora tildes, guardada en la URL (?q=) y combinable con las categorías",
+      "Firebase cargado bajo demanda: el bundle bajó de 512 KB a 196 KB",
     ],
     stack: ["React", "Firebase", "Vite"],
     live: "https://matestore.vercel.app",
@@ -125,20 +125,6 @@ export const projects = [
     live: "https://expense-tracker-fawn-ten-40.vercel.app",
     code: "https://github.com/Tojohtml98/expense-tracker",
     cold: true,
-  },
-  {
-    title: "Emily Layus — Inmobiliaria",
-    kind: "Freelance · Frontend",
-    featured: false,
-    blurb:
-      "Sitio para una clienta real: migración completa de 15 propiedades y 65 fotos a base y hosting propios, sin downtime para el negocio.",
-    highlights: [
-      "Migración de datos e imágenes vía API REST desde el sitio viejo a un proyecto Supabase nuevo",
-      "Panel admin para que la clienta cargue propiedades sin tocar código",
-    ],
-    stack: ["JavaScript", "Supabase", "Netlify"],
-    live: "https://emilylayus-inmobiliaria.netlify.app",
-    cold: false,
   },
   {
     title: "Agenda de Contenido",

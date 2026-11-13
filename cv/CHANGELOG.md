@@ -1,4 +1,10 @@
-# CHANGELOG — CV Tomás Orella
+# CHANGELOG del CV
+
+## 2026-11-13 — CV EN nuevo (botón del Hero)
+- Fuente: `cv/cv-en.html` (generado con career-ops, fact-check contra `cv.md` OK, 1 página Letter).
+- Suma **Client Work** (Lo de Fran: catálogo autogestionado; Serapio: web y carta), TaskFlow **55 tests / 5 suites / ~97 %** (verificado en `main` el 13/11), Host en The Farm (Utah) y Coderhouse.
+- Mismo PDF que el linktree (`linktree-amber-five.vercel.app/Tomas-Orella-CV.pdf`). `cv-es` sin cambios.
+
 
 ## 2026-08-23 — Rediseño visual + fix de bug crítico (archivo del sitio en vivo desactualizado)
 
